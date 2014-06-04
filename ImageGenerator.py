@@ -76,7 +76,7 @@ class flickrThread(threading.Thread):
 
                 # get flickr key
                 keyFile = open("flickr_key.txt", 'r')
-                key = keyFile.readline()
+                key = keyFile.read().strip()
                 keyFile.close()
 
                 # setup flickrAPI object, then get the lists of most recent and most interesting pictures
